@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<conio.h>
+int check_prime(int,int);
+int main()
+{
+int num,f;
+	printf("\n enter a value:");
+	scanf("%d",&num);
+	f=check_prime(2,num);
+	if(f==0)
+    printf("\nnumber is prime:");
+  else
+    printf("\nnumber is not prime:");
+    getch();
+    return 0;
+}
+int check_prime(int i,int num)
+{
+	if(i==num)
+	return 0;
+	else
+	if(num%i==0)
+	return 1;
+	else return(check_prime(i+1,num));
+}
+
